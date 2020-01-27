@@ -18,6 +18,11 @@ class Student
     SQL
     DB[:conn].execute(sql)
   end
+  
+  def self.drop_table
+    sql = "DROP TABLE IF EXISTS students"
+    DB[:conn].execute(sql)
+  end
 
  
 
